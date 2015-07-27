@@ -1,5 +1,5 @@
 // Authentication for Twitter API
-var OAuth = require('node_modules/oauth/lib/OAuth');
+var OAuth = require('OAuth');
 var oauth = new OAuth.OAuth(
       'https://api.twitter.com/oauth/request_token',
       'https://api.twitter.com/oauth/access_token',
@@ -10,7 +10,7 @@ var oauth = new OAuth.OAuth(
       'HMAC-SHA1'
     );
     oauth.get(
-      'https://api.twitter.com/1.1/trends/place.json?id=23424977',
+      'https://api.twitter.com/1.1/search/tweets.json?q=',
       '3359191738-ilVw7893ZDcdLwoNrWkYZx09JHjDyuyG21fOp1w', // Access token
       //you can get it at dev.twitter.com for your own apps
       'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl', 
@@ -18,6 +18,5 @@ var oauth = new OAuth.OAuth(
       function (e, data, res){
         if (e) console.error(e);        
         console.log(require('util').inspect(data));
-        done();      
+        //done();      
       });    
-});
