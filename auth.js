@@ -1,5 +1,5 @@
 // Authentication for Twitter API
-var OAuth = require('OAuth');
+var OAuth = require('node_modules/oauth/lib/OAuth');
 var oauth = new OAuth.OAuth(
       'https://api.twitter.com/oauth/request_token',
       'https://api.twitter.com/oauth/access_token',
