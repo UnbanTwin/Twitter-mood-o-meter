@@ -1,5 +1,5 @@
 // Requires
-
+require("wait.for")
 // Mood Word lists
 var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
 var joyWords = "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"";
@@ -38,7 +38,7 @@ var getTweetCount = function(search) {
     console.log("LOVE");
     var x = getTweetCount(loveWords);
 
-<<<<<<< HEAD
+
     console.log("JOY");
     getTweetCount(joyWords);
     console.log("SUPRISE");
@@ -58,7 +58,7 @@ var getTweetCount = function(search) {
         if(err) {
             return console.log(err);
         }
-=======
+
 console.log("JOY");
 getTweetCount(joyWords);
 console.log("SUPRISE");
@@ -71,7 +71,7 @@ console.log("SAD");
 getTweetCount(sadWords);
 console.log("FEAR");
 getTweetCount(fearWords);
-sleep(10000);
+
 var count = x.toString() + "\n";
 /*
 fs.writeFile("out.txt", count, function(err) {
@@ -81,4 +81,7 @@ fs.writeFile("out.txt", count, function(err) {
 >>>>>>> 9f6322cd89c0b1e03a1aca9d17bbbf7f23f2bafb
 
         console.log("The file was saved!");
+        */
     });
+
+console.log();
