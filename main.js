@@ -28,7 +28,7 @@ var getTweetCount = function(search, y) {
         'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl',
         function (e, data, res){
             if (e) console.error(e);
-            //console.log(data);
+            console.log(data);
             tweet = JSON.parse(data);
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
