@@ -2,7 +2,7 @@
 var p = function(ccc) {
     console.log(ccc);
 }
-//
+
 require("fs");
 p("requirecomplete");
 // Mood Word lists
@@ -42,6 +42,8 @@ var getTweetCount = function(search, y) {
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
+            getTweets();
+            collate();
 
 
 
@@ -73,9 +75,9 @@ var getTweetCount = function(search, y) {
 
     fs.writeFile("out.txt", count, function(err) {
     if(err) {
-    return console.log(err);
+    return con  sole.log(err);
     }*/
-/*
+
     var getTweets = function() {
         console.log("LOVE");
         getTweetCount(loveWords, 0);
@@ -100,7 +102,7 @@ var getTweetCount = function(search, y) {
     }
     p("getTweetsdef");
 
-    getTweets();
+
     var collate = function() {
         p("getTweetsrun");
         for(var i=0; i<=6; i++){
@@ -113,7 +115,8 @@ var getTweetCount = function(search, y) {
 
     }
     p("inCollate")
-    setTimeout(collate, 15000);
+    //setTimeout(collate, 15000);
+
 
     //fs.writeFile("out.txt", count, function(err) {
     //  if(err) {
@@ -124,4 +127,3 @@ var getTweetCount = function(search, y) {
     //  console.log("The file was saved!");
 
     //  });
-*/
