@@ -2,8 +2,7 @@
 var p = function(ccc) {
     console.log(ccc);
 }
-
-require("fs");
+fs = require("fs");
 p("requirecomplete");
 // Mood Word lists
 var nums = [7];
@@ -44,39 +43,21 @@ var getTweetCount = function(search, y) {
             return Object.keys(tweet.statuses).length-1;
             getTweets();
             collate();
+            fs.writeFile("out.txt", count, function(err) {
+              if(err) {
+              return console.log(err);
+              }
 
+
+              console.log("The file was saved!");
+
+             });
 
 
         });
     }
     p("oauthgetdef");
     getTweetCount(tweet);
-    // Not Needed
-    //var mood
-    //document.getElementById('#output').innerHTML = mood;
-    /*console.log("LOVE");
-    var x = getTweetCount(loveWords);
-
-
-    console.log("JOY");
-    getTweetCount(joyWords);
-    console.log("SUPRISE");
-    getTweetCount(supriseWords);
-    console.log("ANGER");
-    getTweetCount(angerWords);
-    console.log("ENVY");
-    getTweetCount(envyWords);
-    console.log("SAD");
-    getTweetCount(sadWords);
-    console.log("FEAR");
-    getTweetCount(fearWords);
-    //sleep(10000);
-    var count = x.toString() + "\n";
-
-    fs.writeFile("out.txt", count, function(err) {
-    if(err) {
-    return con  sole.log(err);
-    }*/
 
     var getTweets = function() {
         console.log("LOVE");
@@ -114,16 +95,5 @@ var getTweetCount = function(search, y) {
         }
 
     }
-    p("inCollate")
+    p("end")
     //setTimeout(collate, 15000);
-
-
-    //fs.writeFile("out.txt", count, function(err) {
-    //  if(err) {
-    //  return console.log(err);
-    //  }
-
-
-    //  console.log("The file was saved!");
-
-    //  });
