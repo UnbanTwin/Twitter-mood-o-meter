@@ -1,5 +1,13 @@
 // Requires
 var fs = require('fs');
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
 // Mood Word lists
 var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
 var joyWords = "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"";
@@ -29,22 +37,35 @@ var getTweetCount = function(search) {
             //console.log(data);
             tweet = JSON.parse(data);
             console.log(Object.keys(tweet.statuses).length-1);
+            return Object.keys(tweet.statuses).length-1;
         });
     }
     // Not Needed
     //var mood
     //document.getElementById('#output').innerHTML = mood;
-    console.log("LOVE");
-    getTweetCount(loveWords);
-    console.log("JOY");
-    getTweetCount(joyWords);
-    console.log("SUPRISE");
-    getTweetCount(supriseWords);
-    console.log("ANGER");
-    getTweetCount(angerWords);
-    console.log("ENVY");
-    getTweetCount(envyWords);
-    console.log("SAD");
-    getTweetCount(sadWords);
-    console.log("FEAR");
-    getTweetCount(fearWords);
+console.log("LOVE");
+var x = getTweetCount(loveWords);
+
+console.log("JOY");
+getTweetCount(joyWords);
+console.log("SUPRISE");
+getTweetCount(supriseWords);
+console.log("ANGER");
+getTweetCount(angerWords);
+console.log("ENVY");
+getTweetCount(envyWords);
+console.log("SAD");
+getTweetCount(sadWords);
+console.log("FEAR");
+getTweetCount(fearWords);
+//sleep(10000);
+//var count = x.toString() + "\n";
+/*
+fs.writeFile("out.txt", count, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+});
+*/
