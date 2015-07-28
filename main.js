@@ -28,7 +28,7 @@ var getTweetCount = function(search, y) {
         'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl',
         function (e, data, res){
             if (e) console.error(e);
-            console.log(data);
+            //console.log(data);
             tweet = JSON.parse(data);
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
@@ -62,10 +62,10 @@ var getTweetCount = function(search, y) {
     return console.log(err);
     }*/
     var getTweets = function() {
-      console.log("LOVE");
-      x = getTweetCount(loveWords, 0);
+        console.log("LOVE");
+        getTweetCount(loveWords, 0);
         console.log("JOY");
-        x = getTweetCount(joyWords, 1);
+        getTweetCount(joyWords, 1);
         console.log("SUPRISE");
         getTweetCount(supriseWords, 2);
         console.log("ANGER");
@@ -85,7 +85,7 @@ var getTweetCount = function(search, y) {
         console.log("test");
         count = count + nums[i].toString() + "\n"
       }
-    }, 15000)
+    }, 30000)
 
 
     //fs.writeFile("out.txt", count, function(err) {
