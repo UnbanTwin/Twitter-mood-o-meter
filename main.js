@@ -81,7 +81,5 @@ fs.writeFile("out.txt", count, function(err) {
 
 
         console.log("The file was saved!");
-
+*/
     });
-    */
-    
