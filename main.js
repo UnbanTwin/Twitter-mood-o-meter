@@ -58,8 +58,8 @@ console.log("SAD");
 getTweetCount(sadWords);
 console.log("FEAR");
 getTweetCount(fearWords);
-//sleep(10000);
-//var count = x.toString() + "\n";
+sleep(10000);
+var count = x.toString() + "\n";
 /*
 fs.writeFile("out.txt", count, function(err) {
     if(err) {

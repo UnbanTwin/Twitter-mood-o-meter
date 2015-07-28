@@ -1,0 +1,384 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'sleep' ]
+2 info using npm@2.9.1
+3 info using node@v0.12.3
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose install initial load of C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\package.json
+6 verbose installManyTop reading scoped package data from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\express\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\oauth\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\simple\package.json
+9 verbose readDependencies loading dependencies from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\package.json
+10 silly cache add args [ 'sleep', null ]
+11 verbose cache add spec sleep
+12 silly cache add parsed spec { raw: 'sleep',
+12 silly cache add   scope: null,
+12 silly cache add   name: 'sleep',
+12 silly cache add   rawSpec: '',
+12 silly cache add   spec: '*',
+12 silly cache add   type: 'range' }
+13 silly addNamed sleep@*
+14 verbose addNamed "*" is a valid semver range for sleep
+15 silly addNameRange { name: 'sleep', range: '*', hasData: false }
+16 silly mapToRegistry name sleep
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry uri https://registry.npmjs.org/sleep
+20 verbose addNameRange registry:https://registry.npmjs.org/sleep not in flight; fetching
+21 verbose request uri https://registry.npmjs.org/sleep
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 11:03:52 AM
+24 verbose request id 46078a4b4d00e564
+25 http request GET https://registry.npmjs.org/sleep
+26 http 200 https://registry.npmjs.org/sleep
+27 silly get cb [ 200,
+27 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly get     etag: '"5SCSTTORHIJ7FI58H6ZBLLKJP"',
+27 silly get     'content-type': 'application/json',
+27 silly get     'cache-control': 'max-age=60',
+27 silly get     'content-length': '14711',
+27 silly get     'accept-ranges': 'bytes',
+27 silly get     date: 'Tue, 28 Jul 2015 10:03:53 GMT',
+27 silly get     via: '1.1 varnish',
+27 silly get     age: '0',
+27 silly get     connection: 'keep-alive',
+27 silly get     'x-served-by': 'cache-lcy1123-LCY',
+27 silly get     'x-cache': 'MISS',
+27 silly get     'x-cache-hits': '0',
+27 silly get     'x-timer': 'S1438077833.607219,VS0,VE93',
+27 silly get     vary: 'Accept' } ]
+28 verbose get saving sleep to C:\Users\Jake\AppData\Roaming\npm-cache\registry.npmjs.org\sleep\.cache.json
+29 silly addNameRange number 2 { name: 'sleep', range: '*', hasData: true }
+30 silly addNameRange versions [ 'sleep',
+30 silly addNameRange   [ '1.0.0',
+30 silly addNameRange     '1.0.1',
+30 silly addNameRange     '1.0.2',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '1.1.1',
+30 silly addNameRange     '1.1.2',
+30 silly addNameRange     '1.1.3',
+30 silly addNameRange     '1.1.4',
+30 silly addNameRange     '1.1.5',
+30 silly addNameRange     '1.1.6',
+30 silly addNameRange     '1.1.7',
+30 silly addNameRange     '1.1.8',
+30 silly addNameRange     '1.2.0',
+30 silly addNameRange     '2.0.0' ] ]
+31 silly addNamed sleep@2.0.0
+32 verbose addNamed "2.0.0" is a plain semver version for sleep
+33 silly mapToRegistry name sleep
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry uri https://registry.npmjs.org/sleep
+37 verbose addRemoteTarball https://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz not in flight; adding
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz',
+38 verbose addRemoteTarball   '96d8ef97970ecad464b146ea5e86dd5d6ceb65bc' ]
+39 info retry fetch attempt 1 at 11:03:52 AM
+40 info attempt registry request try #1 at 11:03:52 AM
+41 http fetch GET https://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz
+42 http fetch 200 https://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz
+43 silly fetchAndShaCheck shasum 96d8ef97970ecad464b146ea5e86dd5d6ceb65bc
+44 verbose addTmpTarball C:\Users\Jake\AppData\Local\Temp\npm-5136-070a3aa7\registry.npmjs.org\sleep\-\sleep-2.0.0.tgz not in flight; adding
+45 verbose addTmpTarball already have metadata; skipping unpack for sleep@2.0.0
+46 silly cache afterAdd sleep@2.0.0
+47 verbose afterAdd C:\Users\Jake\AppData\Roaming\npm-cache\sleep\2.0.0\package\package.json not in flight; writing
+48 verbose afterAdd C:\Users\Jake\AppData\Roaming\npm-cache\sleep\2.0.0\package\package.json written
+49 silly install resolved [ { name: 'sleep',
+49 silly install resolved     version: '2.0.0',
+49 silly install resolved     main: 'index.js',
+49 silly install resolved     description: 'Add sleep() and usleep() to nodejs',
+49 silly install resolved     homepage: 'http://github.com/ErikDubbelboer/node-sleep',
+49 silly install resolved     author: { name: 'Erik Dubbelboer', email: 'erik@dubbelboer.com' },
+49 silly install resolved     engines: { node: '>=0.4.0' },
+49 silly install resolved     keywords: [ 'sleep', 'usleep' ],
+49 silly install resolved     repository:
+49 silly install resolved      { type: 'git',
+49 silly install resolved        url: 'https://github.com/ErikDubbelboer/node-sleep.git' },
+49 silly install resolved     dependencies: { nan: '*' },
+49 silly install resolved     gypfile: true,
+49 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+49 silly install resolved     gitHead: '3c850e05250d3ad72499fb0cefc4be13e9ce24d2',
+49 silly install resolved     bugs: { url: 'https://github.com/ErikDubbelboer/node-sleep/issues' },
+49 silly install resolved     _id: 'sleep@2.0.0',
+49 silly install resolved     _shasum: '96d8ef97970ecad464b146ea5e86dd5d6ceb65bc',
+49 silly install resolved     _from: 'sleep@*',
+49 silly install resolved     _npmVersion: '1.4.28',
+49 silly install resolved     _npmUser: { name: 'erikdubbelboer', email: 'erik@dubbelboer.com' },
+49 silly install resolved     maintainers: [ [Object] ],
+49 silly install resolved     dist:
+49 silly install resolved      { shasum: '96d8ef97970ecad464b146ea5e86dd5d6ceb65bc',
+49 silly install resolved        tarball: 'http://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz' },
+49 silly install resolved     directories: {},
+49 silly install resolved     _resolved: 'https://registry.npmjs.org/sleep/-/sleep-2.0.0.tgz' } ]
+50 info install sleep@2.0.0 into C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter
+51 info installOne sleep@2.0.0
+52 verbose installOne of sleep to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter not in flight; installing
+53 verbose lock using C:\Users\Jake\AppData\Roaming\npm-cache\_locks\sleep-b465293f07bd0b82.lock for C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+54 silly install write writing sleep 2.0.0 to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+55 verbose unbuild node_modules\sleep
+56 silly gentlyRm C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep is being purged from base C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter
+57 verbose gentlyRm don't care about contents; nuking C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+58 verbose tar unpack C:\Users\Jake\AppData\Roaming\npm-cache\sleep\2.0.0\package.tgz
+59 verbose tar unpacking to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+60 silly gentlyRm C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep is being purged
+61 verbose gentlyRm don't care about contents; nuking C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+62 silly gunzTarPerm modes [ '777', '666' ]
+63 silly gunzTarPerm extractEntry package.json
+64 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+65 silly gunzTarPerm extractEntry .npmignore
+66 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+67 silly gunzTarPerm extractEntry README.md
+68 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+69 silly gunzTarPerm extractEntry test.js
+70 silly gunzTarPerm modified mode [ 'test.js', 436, 438 ]
+71 silly gunzTarPerm extractEntry index.js
+72 silly gunzTarPerm modified mode [ 'index.js', 436, 438 ]
+73 silly gunzTarPerm extractEntry LICENSE.txt
+74 silly gunzTarPerm modified mode [ 'LICENSE.txt', 436, 438 ]
+75 silly gunzTarPerm extractEntry sleep.cc
+76 silly gunzTarPerm modified mode [ 'sleep.cc', 436, 438 ]
+77 silly gunzTarPerm extractEntry binding.gyp
+78 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 438 ]
+79 verbose write writing to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\package.json
+80 info preinstall sleep@2.0.0
+81 verbose readDependencies loading dependencies from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\package.json
+82 silly prepareForInstallMany adding nan@* from sleep dependencies
+83 verbose readDependencies loading dependencies from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\package.json
+84 silly cache add args [ 'nan@*', null ]
+85 verbose cache add spec nan@*
+86 silly cache add parsed spec { raw: 'nan@*',
+86 silly cache add   scope: null,
+86 silly cache add   name: 'nan',
+86 silly cache add   rawSpec: '*',
+86 silly cache add   spec: '*',
+86 silly cache add   type: 'range' }
+87 silly addNamed nan@*
+88 verbose addNamed "*" is a valid semver range for nan
+89 silly addNameRange { name: 'nan', range: '*', hasData: false }
+90 silly mapToRegistry name nan
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/nan
+94 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+95 verbose request uri https://registry.npmjs.org/nan
+96 verbose request no auth needed
+97 info attempt registry request try #1 at 11:03:53 AM
+98 http request GET https://registry.npmjs.org/nan
+99 http 200 https://registry.npmjs.org/nan
+100 silly get cb [ 200,
+100 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 silly get     etag: '"9T2TEINHQE1CYR42PWQNCEY3X"',
+100 silly get     'content-type': 'application/json',
+100 silly get     'cache-control': 'max-age=60',
+100 silly get     'content-length': '109608',
+100 silly get     'accept-ranges': 'bytes',
+100 silly get     date: 'Tue, 28 Jul 2015 10:03:54 GMT',
+100 silly get     via: '1.1 varnish',
+100 silly get     age: '42',
+100 silly get     connection: 'keep-alive',
+100 silly get     'x-served-by': 'cache-lcy1123-LCY',
+100 silly get     'x-cache': 'HIT',
+100 silly get     'x-cache-hits': '113',
+100 silly get     'x-timer': 'S1438077834.280788,VS0,VE0',
+100 silly get     vary: 'Accept' } ]
+101 verbose get saving nan to C:\Users\Jake\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+102 silly addNameRange number 2 { name: 'nan', range: '*', hasData: true }
+103 silly addNameRange versions [ 'nan',
+103 silly addNameRange   [ '0.3.0-wip',
+103 silly addNameRange     '0.3.0-wip2',
+103 silly addNameRange     '0.3.0',
+103 silly addNameRange     '0.3.1',
+103 silly addNameRange     '0.3.2',
+103 silly addNameRange     '0.4.0',
+103 silly addNameRange     '0.4.1',
+103 silly addNameRange     '0.4.2',
+103 silly addNameRange     '0.4.3',
+103 silly addNameRange     '0.4.4',
+103 silly addNameRange     '0.5.0',
+103 silly addNameRange     '0.5.1',
+103 silly addNameRange     '0.5.2',
+103 silly addNameRange     '0.6.0',
+103 silly addNameRange     '0.7.0',
+103 silly addNameRange     '0.7.1',
+103 silly addNameRange     '0.8.0',
+103 silly addNameRange     '1.0.0',
+103 silly addNameRange     '1.1.0',
+103 silly addNameRange     '1.1.1',
+103 silly addNameRange     '1.1.2',
+103 silly addNameRange     '1.2.0',
+103 silly addNameRange     '1.3.0',
+103 silly addNameRange     '1.4.0',
+103 silly addNameRange     '1.4.1',
+103 silly addNameRange     '1.5.0',
+103 silly addNameRange     '1.4.2',
+103 silly addNameRange     '1.4.3',
+103 silly addNameRange     '1.5.1',
+103 silly addNameRange     '1.5.2',
+103 silly addNameRange     '1.6.0',
+103 silly addNameRange     '1.5.3',
+103 silly addNameRange     '1.6.1',
+103 silly addNameRange     '1.6.2',
+103 silly addNameRange     '1.7.0',
+103 silly addNameRange     '1.8.0',
+103 silly addNameRange     '1.8.1',
+103 silly addNameRange     '1.8.2',
+103 silly addNameRange     '1.8.3',
+103 silly addNameRange     '1.8.4' ] ]
+104 silly addNamed nan@1.8.4
+105 verbose addNamed "1.8.4" is a plain semver version for nan
+106 silly mapToRegistry name nan
+107 silly mapToRegistry using default registry
+108 silly mapToRegistry registry https://registry.npmjs.org/
+109 silly mapToRegistry uri https://registry.npmjs.org/nan
+110 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-1.8.4.tgz not in flight; adding
+111 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-1.8.4.tgz',
+111 verbose addRemoteTarball   '3c76b5382eab33e44b758d2813ca9d92e9342f34' ]
+112 info retry fetch attempt 1 at 11:03:53 AM
+113 info attempt registry request try #1 at 11:03:53 AM
+114 http fetch GET https://registry.npmjs.org/nan/-/nan-1.8.4.tgz
+115 http fetch 200 https://registry.npmjs.org/nan/-/nan-1.8.4.tgz
+116 silly fetchAndShaCheck shasum 3c76b5382eab33e44b758d2813ca9d92e9342f34
+117 verbose addTmpTarball C:\Users\Jake\AppData\Local\Temp\npm-5136-070a3aa7\registry.npmjs.org\nan\-\nan-1.8.4.tgz not in flight; adding
+118 verbose addTmpTarball already have metadata; skipping unpack for nan@1.8.4
+119 silly cache afterAdd nan@1.8.4
+120 verbose afterAdd C:\Users\Jake\AppData\Roaming\npm-cache\nan\1.8.4\package\package.json not in flight; writing
+121 verbose afterAdd C:\Users\Jake\AppData\Roaming\npm-cache\nan\1.8.4\package\package.json written
+122 silly install resolved [ { name: 'nan',
+122 silly install resolved     version: '1.8.4',
+122 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+122 silly install resolved     main: 'include_dirs.js',
+122 silly install resolved     repository: { type: 'git', url: 'git://github.com/iojs/nan.git' },
+122 silly install resolved     scripts:
+122 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+122 silly install resolved        'rebuild-tests': 'pangyp rebuild --directory test' },
+122 silly install resolved     contributors:
+122 silly install resolved      [ [Object],
+122 silly install resolved        [Object],
+122 silly install resolved        [Object],
+122 silly install resolved        [Object],
+122 silly install resolved        [Object],
+122 silly install resolved        [Object],
+122 silly install resolved        [Object] ],
+122 silly install resolved     devDependencies:
+122 silly install resolved      { bindings: '~1.2.1',
+122 silly install resolved        'node-gyp': '~1.0.2',
+122 silly install resolved        pangyp: '~2.0.1',
+122 silly install resolved        tap: '~0.7.1',
+122 silly install resolved        xtend: '~4.0.0' },
+122 silly install resolved     license: 'MIT',
+122 silly install resolved     gitHead: 'ed3bbf4ced0cf7937b4e4164766797f71aa97f3d',
+122 silly install resolved     bugs: { url: 'https://github.com/iojs/nan/issues' },
+122 silly install resolved     homepage: 'https://github.com/iojs/nan#readme',
+122 silly install resolved     _id: 'nan@1.8.4',
+122 silly install resolved     _shasum: '3c76b5382eab33e44b758d2813ca9d92e9342f34',
+122 silly install resolved     _from: 'nan@*',
+122 silly install resolved     _npmVersion: '2.8.3',
+122 silly install resolved     _nodeVersion: '0.12.2',
+122 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+122 silly install resolved     maintainers: [ [Object], [Object] ],
+122 silly install resolved     dist:
+122 silly install resolved      { shasum: '3c76b5382eab33e44b758d2813ca9d92e9342f34',
+122 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.8.4.tgz' },
+122 silly install resolved     directories: {},
+122 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.8.4.tgz' } ]
+123 info install nan@1.8.4 into C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+124 info installOne nan@1.8.4
+125 verbose installOne of nan to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep not in flight; installing
+126 verbose lock using C:\Users\Jake\AppData\Roaming\npm-cache\_locks\nan-9d845307943aece7.lock for C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+127 silly install write writing nan 1.8.4 to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+128 verbose unbuild node_modules\sleep\node_modules\nan
+129 silly gentlyRm C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan is being purged from base C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter
+130 verbose gentlyRm don't care about contents; nuking C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+131 verbose tar unpack C:\Users\Jake\AppData\Roaming\npm-cache\nan\1.8.4\package.tgz
+132 verbose tar unpacking to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+133 silly gentlyRm C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan is being purged
+134 verbose gentlyRm don't care about contents; nuking C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+135 silly gunzTarPerm modes [ '777', '666' ]
+136 silly gunzTarPerm extractEntry package.json
+137 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+138 silly gunzTarPerm extractEntry README.md
+139 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+140 silly gunzTarPerm extractEntry include_dirs.js
+141 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+142 silly gunzTarPerm extractEntry LICENSE.md
+143 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+144 silly gunzTarPerm extractEntry .dntrc
+145 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+146 silly gunzTarPerm extractEntry appveyor.yml
+147 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+148 silly gunzTarPerm extractEntry nan.h
+149 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+150 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+151 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+152 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+153 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+154 silly gunzTarPerm extractEntry nan_new.h
+155 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+156 silly gunzTarPerm extractEntry nan_string_bytes.h
+157 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+158 silly gunzTarPerm extractEntry CHANGELOG.md
+159 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+160 verbose write writing to C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan\package.json
+161 info preinstall nan@1.8.4
+162 verbose readDependencies loading dependencies from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan\package.json
+163 verbose readDependencies loading dependencies from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan\package.json
+164 silly install resolved []
+165 verbose about to build C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+166 info build C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+167 info linkStuff nan@1.8.4
+168 silly linkStuff nan@1.8.4 has C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules as its parent node_modules
+169 verbose linkBins nan@1.8.4
+170 verbose linkMans nan@1.8.4
+171 verbose rebuildBundles nan@1.8.4
+172 info install nan@1.8.4
+173 info postinstall nan@1.8.4
+174 verbose unlock done using C:\Users\Jake\AppData\Roaming\npm-cache\_locks\nan-9d845307943aece7.lock for C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep\node_modules\nan
+175 verbose about to build C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+176 info build C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+177 info linkStuff sleep@2.0.0
+178 silly linkStuff sleep@2.0.0 has C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules as its parent node_modules
+179 verbose linkBins sleep@2.0.0
+180 verbose linkMans sleep@2.0.0
+181 verbose rebuildBundles sleep@2.0.0
+182 verbose rebuildBundles [ 'nan' ]
+183 info install sleep@2.0.0
+184 verbose unsafe-perm in lifecycle true
+185 info sleep@2.0.0 Failed to exec install script
+186 verbose unlock done using C:\Users\Jake\AppData\Roaming\npm-cache\_locks\sleep-b465293f07bd0b82.lock for C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+187 verbose stack Error: sleep@2.0.0 install: `node-gyp rebuild`
+187 verbose stack Exit status 1
+187 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+187 verbose stack     at EventEmitter.emit (events.js:110:17)
+187 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+187 verbose stack     at ChildProcess.emit (events.js:110:17)
+187 verbose stack     at maybeClose (child_process.js:1015:16)
+187 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+188 verbose pkgid sleep@2.0.0
+189 verbose cwd C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter
+190 error Windows_NT 6.3.9600
+191 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "sleep"
+192 error node v0.12.3
+193 error npm  v2.9.1
+194 error code ELIFECYCLE
+195 error sleep@2.0.0 install: `node-gyp rebuild`
+195 error Exit status 1
+196 error Failed at the sleep@2.0.0 install script 'node-gyp rebuild'.
+196 error This is most likely a problem with the sleep package,
+196 error not with npm itself.
+196 error Tell the author that this fails on your system:
+196 error     node-gyp rebuild
+196 error You can get their info via:
+196 error     npm owner ls sleep
+196 error There is likely additional logging output above.
+197 verbose exit [ 1, true ]
+198 verbose unbuild node_modules\sleep
+199 info preuninstall sleep@2.0.0
+200 info uninstall sleep@2.0.0
+201 verbose unbuild rmStuff sleep@2.0.0 from C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules
+202 info postuninstall sleep@2.0.0
+203 silly gentlyRm C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep is being purged from base C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter
+204 verbose gentlyRm don't care about contents; nuking C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+205 silly vacuum-fs purging C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules\sleep
+206 silly vacuum-fs quitting because other entries in C:\Users\Jake\Documents\GitHub\Twitter-mood-o-meter\node_modules
