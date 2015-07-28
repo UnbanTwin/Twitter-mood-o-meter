@@ -1,2 +1,2 @@
 # Twitter-mood-o-meter
-## By sam and j=ake
+## By sam and jake
