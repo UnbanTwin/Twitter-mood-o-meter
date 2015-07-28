@@ -6,8 +6,9 @@ var p = function(ccc) {
 require("fs");
 p("requirecomplete");
 // Mood Word lists
-var nums = [7]
-var count = ""
+var nums = [7];
+var count = "";
+var tweet;
 var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
 var joyWords = "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"";
 var supriseWords = "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"";
@@ -39,8 +40,8 @@ var getTweetCount = function(search, y) {
             tweet = JSON.parse(data);
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
-            nums[y] = Object.keys(tweet.statuses).length-1;
-            p(nums);
+
+
         });
     }
     p("oauthgetdef");
@@ -74,12 +75,16 @@ var getTweetCount = function(search, y) {
     var getTweets = function() {
         console.log("LOVE");
         getTweetCount(loveWords, 0);
+        nums[0] = Object.keys(tweet.statuses).length-1;
         console.log("JOY");
         getTweetCount(joyWords, 1);
+        nums[1] = Object.keys(tweet.statuses).length-1;
         console.log("SUPRISE");
         getTweetCount(supriseWords, 2);
+        nums[2] = Object.keys(tweet.statuses).length-1;
         console.log("ANGER");
         getTweetCount(angerWords, 3);
+        nums[3] = Object.keys(tweet.statuses).length-1;
         console.log("ENVY");
         getTweetCount(envyWords, 4);
         console.log("SAD");
@@ -91,17 +96,19 @@ var getTweetCount = function(search, y) {
     p("getTweetsdef");
 
     getTweets();
-    p("getTweetsrun");
-    
+    var collate = function() {
+      p("getTweetsrun");
       for(var i=0; i<=6; i++){
         p("in" + i);
         console.log("test");
-        count = count + nums[i].toString() + "\n"
+        count = count + nums[i].toString();
         p("done" + i);
         p(count);
       }
 
-
+}
+p("inCollate")
+setTimeout(collate, 15000);
 
     //fs.writeFile("out.txt", count, function(err) {
       //  if(err) {
