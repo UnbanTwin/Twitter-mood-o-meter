@@ -1,5 +1,10 @@
 // Requires
-require("fs")
+var p = function(ccc) {
+  console.log(ccc);
+}
+
+require("fs");
+p("requirecomplete");
 // Mood Word lists
 var nums = [7]
 var count = ""
@@ -10,6 +15,7 @@ var angerWords = "\"i+hate\"+OR+\"really+angry\"+OR+\"i+am+mad\"+OR+\"really+hat
 var envyWords = "\"i+wish+i\"+OR+\"i'm+envious\"+OR+ \"i'm+jealous\"+OR+\"i+want+to+be\"+OR+\"why+can't+i\"";
 var sadWords = "\"i'm+so+sad\"+OR+\"i'm+heartbroken\"+OR+\"i'm+so+upset\"+OR+\"i'm+depressed\"+OR+\"i+can't+stop+crying\"";
 var fearWords = "\"i'm+so+scared\"+OR+\"i'm+really+scared\"+OR+\"i'm+terrified\"+OR+\"i'm+really+afraid\"+OR+\"so+scared+i\"";
+p("varsdef");
 // Authentication for Twitter API
 var OAuth = require('OAuth');
 var oauth = new OAuth.OAuth(
@@ -21,6 +27,7 @@ var oauth = new OAuth.OAuth(
     null,
     'HMAC-SHA1'
 );
+p("oauthdonecomplete");
 var getTweetCount = function(search, y) {
     oauth.get(
         'https://api.twitter.com/1.1/search/tweets.json?q=' + search + '&count=100&include_entities=false',
@@ -33,8 +40,10 @@ var getTweetCount = function(search, y) {
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
             nums[y] = Object.keys(tweet.statuses).length-1;
+            p(nums);
         });
     }
+    p("oauthgetdef");
     // Not Needed
     //var mood
     //document.getElementById('#output').innerHTML = mood;
@@ -61,6 +70,7 @@ var getTweetCount = function(search, y) {
     if(err) {
     return console.log(err);
     }*/
+
     var getTweets = function() {
         console.log("LOVE");
         getTweetCount(loveWords, 0);
@@ -78,14 +88,19 @@ var getTweetCount = function(search, y) {
         var test = getTweetCount(fearWords, 6);
 
     }
+    p("getTweetsdef");
 
     getTweets();
-    setTimeout(function() {
+    p("getTweetsrun");
+    
       for(var i=0; i<=6; i++){
+        p("in" + i);
         console.log("test");
         count = count + nums[i].toString() + "\n"
+        p("done" + i);
+        p(count);
       }
-    }, 30000)
+
 
 
     //fs.writeFile("out.txt", count, function(err) {
