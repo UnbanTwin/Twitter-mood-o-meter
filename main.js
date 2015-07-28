@@ -24,13 +24,25 @@ var getTweetCount = function(search) {
       'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl',
       function (e, data, res){
         if (e) console.error(e);
-        console.log(data);
+        //console.log(data);
 		tweet = JSON.parse(data);
 		console.log(Object.keys(tweet.statuses).length-1);
       });
 }
-
+// Not Needed
 //var mood
 //document.getElementById('#output').innerHTML = mood;
-getTweetCount("FoCSOS");
-//
+console.log("LOVE");
+getTweetCount(loveWords);
+console.log("JOY");
+getTweetCount(joyWords);
+console.log("SUPRISE");
+getTweetCount(supriseWords);
+console.log("ANGER");
+getTweetCount(angerWords);
+console.log("ENVY");
+getTweetCount(envyWords);
+console.log("SAD");
+getTweetCount(sadWords);
+console.log("FEAR");
+getTweetCount(fearWords);
