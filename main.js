@@ -38,7 +38,7 @@ var getTweetCount = function(search) {
     console.log("LOVE");
     var x = getTweetCount(loveWords);
 
-<<<<<<< HEAD
+
     console.log("JOY");
     getTweetCount(joyWords);
     console.log("SUPRISE");
@@ -58,7 +58,7 @@ var getTweetCount = function(search) {
         if(err) {
             return console.log(err);
         }
-=======
+
 console.log("JOY");
 getTweetCount(joyWords);
 console.log("SUPRISE");
@@ -78,7 +78,7 @@ fs.writeFile("out.txt", count, function(err) {
     if(err) {
         return console.log(err);
     }
->>>>>>> 9f6322cd89c0b1e03a1aca9d17bbbf7f23f2bafb
+
 
         console.log("The file was saved!");
     });
