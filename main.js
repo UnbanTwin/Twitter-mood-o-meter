@@ -37,10 +37,10 @@ var getTweetCount = function(search, y) {
             if (e) console.error(e);
             //console.log(data);
             tweet = JSON.parse(data);
+            p("data parsed")
             console.log("123");
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
-            return Object.keys(tweet.statuses).length-1;
             getTweets();
             collate();
             fs.writeFile("out.txt", count, function(err) {
@@ -85,6 +85,7 @@ var getTweetCount = function(search, y) {
 
 
     var collate = function() {
+
         p("getTweetsrun");
         for(var i=0; i<=6; i++){
             p("in" + i);
