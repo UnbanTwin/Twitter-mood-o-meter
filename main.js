@@ -35,7 +35,7 @@ var getTweetCount = function(search) {
     // Not Needed
     //var mood
     //document.getElementById('#output').innerHTML = mood;
-    console.log("LOVE");
+    /*console.log("LOVE");
     var x = getTweetCount(loveWords);
 
 
@@ -57,22 +57,31 @@ var getTweetCount = function(search) {
     fs.writeFile("out.txt", count, function(err) {
         if(err) {
             return console.log(err);
-        }
+        }*/
+var getTweets = function() {
+  console.log("JOY");
+  getTweetCount(joyWords);
+  console.log("SUPRISE");
+  getTweetCount(supriseWords);
+  console.log("ANGER");
+  getTweetCount(angerWords);
+  console.log("ENVY");
+  getTweetCount(envyWords);
+  console.log("SAD");
+  getTweetCount(sadWords);
+  console.log("FEAR");
+  var test = getTweetCount(fearWords);
+  for(;;) {
+    var foo = 2 + 2;
+    if(test != null) {
 
-console.log("JOY");
-getTweetCount(joyWords);
-console.log("SUPRISE");
-getTweetCount(supriseWords);
-console.log("ANGER");
-getTweetCount(angerWords);
-console.log("ENVY");
-getTweetCount(envyWords);
-console.log("SAD");
-getTweetCount(sadWords);
-console.log("FEAR");
-getTweetCount(fearWords);
+      break;
+    }
+  }
+}
 
-var count = x.toString() + "\n";
+getTweets();
+//var count = x.toString() + "\n";
 /*
 fs.writeFile("out.txt", count, function(err) {
     if(err) {
@@ -82,4 +91,4 @@ fs.writeFile("out.txt", count, function(err) {
 
         console.log("The file was saved!");
 */
-    });
+  //  });
