@@ -1,6 +1,8 @@
 // Requires
-require("wait.for")
+require("fs")
 // Mood Word lists
+var nums = [7]
+var count = ""
 var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
 var joyWords = "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"";
 var supriseWords = "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"";
@@ -19,7 +21,7 @@ var oauth = new OAuth.OAuth(
     null,
     'HMAC-SHA1'
 );
-var getTweetCount = function(search) {
+var getTweetCount = function(search, y) {
     oauth.get(
         'https://api.twitter.com/1.1/search/tweets.json?q=' + search + '&count=100&include_entities=false',
         '3359191738-ilVw7893ZDcdLwoNrWkYZx09JHjDyuyG21fOp1w', // Access token
@@ -30,6 +32,7 @@ var getTweetCount = function(search) {
             tweet = JSON.parse(data);
             console.log(Object.keys(tweet.statuses).length-1);
             return Object.keys(tweet.statuses).length-1;
+            nums[y] = Object.keys(tweet.statuses).length-1;
         });
     }
     // Not Needed
@@ -59,37 +62,38 @@ var getTweetCount = function(search) {
     return console.log(err);
     }*/
     var getTweets = function() {
+      console.log("LOVE");
+      x = getTweetCount(loveWords, 0);
         console.log("JOY");
-        x = getTweetCount(joyWords);
-        getTweetCount(joyWords);
+        x = getTweetCount(joyWords, 1);
         console.log("SUPRISE");
-        getTweetCount(supriseWords);
+        getTweetCount(supriseWords, 2);
         console.log("ANGER");
-        getTweetCount(angerWords);
+        getTweetCount(angerWords, 3);
         console.log("ENVY");
-        getTweetCount(envyWords);
+        getTweetCount(envyWords, 4);
         console.log("SAD");
-        getTweetCount(sadWords);
+        getTweetCount(sadWords, 5);
         console.log("FEAR");
-        var test = getTweetCount(fearWords);
-        for(;;) {
-            var foo = 2 + 2;
-            if(test == null) {
+        var test = getTweetCount(fearWords, 6);
 
-                break;
-            }
-        }
     }
 
     getTweets();
-    var count = x.toString() + "\n";
+    setTimeout(function() {
+      for(var i=0; i<=6; i++){
+        console.log("test");
+        count = count + nums[i].toString() + "\n"
+      }
+    }, 15000)
 
-    fs.writeFile("out.txt", count, function(err) {
-        if(err) {
-            return console.log(err);
-        }
+
+    //fs.writeFile("out.txt", count, function(err) {
+      //  if(err) {
+          //  return console.log(err);
+      //  }
 
 
-        console.log("The file was saved!");
+      //  console.log("The file was saved!");
 
-    });
+  //  });
