@@ -33,4 +33,3 @@ var getTweetCount = function(search) {
 //var mood
 //document.getElementById('#output').innerHTML = mood;
 getTweetCount("FoCSOS");
-//
