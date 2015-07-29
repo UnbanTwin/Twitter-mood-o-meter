@@ -19,6 +19,6 @@ oReq.onload = function () {
     console.log(out)
     var bestEmotion = Math.max.apply( Math, out );
     console.log(bestEmotion);
-    
+
 
 }
