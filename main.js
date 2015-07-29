@@ -42,9 +42,10 @@ var getTweetCount = function(search, y) {
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
             getTweets();
+            setTimeout(collate, 15000)
+            //collate();
+            err = fs.writeFileSync("out.txt", count + "foo")
 
-            collate();
-            fs.writeFile("out.txt", count, function(err) {
               if(err) {
               return console.log(err);
               }
@@ -52,7 +53,7 @@ var getTweetCount = function(search, y) {
 
               console.log("The file was saved!");
 
-             });
+
 
 
         });
