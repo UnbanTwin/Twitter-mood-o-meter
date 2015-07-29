@@ -42,9 +42,9 @@ var getTweetCount = function(search, y) {
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
             getTweets();
-            setTimeout(collate, 15000)
-            //collate();
-            fs.writeFile("out.txt", count + "foo", function(err) {
+
+            collate();
+            fs.writeFile("out.txt", count, function(err) {
               if(err) {
               return console.log(err);
               }
@@ -98,4 +98,4 @@ var getTweetCount = function(search, y) {
 
     }
     p("end")
-    //setTimeout(collate, 15000);
+    setTimeout(collate, 15000);
