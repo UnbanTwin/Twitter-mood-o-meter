@@ -10,6 +10,6 @@ var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
 
-    console.log(tweets.statuses.length-1);
+    console.log(tweets.statuses.length);
   }
 });
