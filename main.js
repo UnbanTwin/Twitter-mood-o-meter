@@ -11,14 +11,15 @@ var currTime = new Date();
 var filtering = 10;
 var threshold;
 var uppthresh;
+var totalTweets;
 // Dummy tweet to get current tweet ID
 var params = {status:"This is a dummy tweet to get the current tweet ID. Time:" + currTime};
 client.post('statuses/update', params, function(error, tweets, response){
   if (!error) {
-    console.log(tweets.id);
-    tweetid = tweets.id;
+    console.log(tweets.id_str);
+    tweetid = tweets.id_str;
     fs.writeFile("data/id.txt", tweetid.toString(), function(err) {
-
+    console.log(tweetid);
     console.log("Tweet file saved");
     threshold = tweetid;
     uppthresh = tweetid + 100;
@@ -26,17 +27,18 @@ client.post('statuses/update', params, function(error, tweets, response){
   }
 });
 
-
+// gecode 50.724949, -3.530624
 
 
 // Happy
-var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count: 100, since_id: threshold, max_id: uppthresh};
+var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count:15, since_id: threshold, result_type: "recent"};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
-
+    console.log(tweets);
     happyTweets = (tweets.statuses.length);
     console.log("HAPPY TWEETS");
     console.log(happyTweets);
+    totalTweets = happyTweets
 
   }
 });
