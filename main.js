@@ -45,6 +45,19 @@ var getTweetCount = function(search, y) {
             if (hasRun == false) {
                 getTweets();
 
+            }
+            else{}
+            setTimeout(collate, 15000)
+            //collate();
+            err = fs.writeFileSync("out.txt", count + "foo")
+
+
+              if(err) {
+              return console.log(err);
+              }
+
+
+
 
 
                 setTimeout(collate, 15000)
@@ -103,6 +116,7 @@ var getTweetCount = function(search, y) {
             p(count);
         }
 
-    };
-    p("end");
+
+    }
+    p("end")
     //setTimeout(collate, 15000);
