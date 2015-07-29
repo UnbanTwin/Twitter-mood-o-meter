@@ -96,6 +96,6 @@ var getTweetCount = function(search, y) {
             p(count);
         }
 
-    }
-    p("end")
+    };
+    p("end");
     //setTimeout(collate, 15000);
