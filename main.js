@@ -22,7 +22,7 @@ client.post('statuses/update', params, function(error, tweets, response){
     console.log(tweetid);
     console.log("Tweet file saved");
     threshold = tweetid;
-    uppthresh = tweetid + 100;
+    //uppthresh = tweetid + 100;
     });
   }
 });
@@ -31,7 +31,9 @@ client.post('statuses/update', params, function(error, tweets, response){
 
 
 // Happy
-var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count:15, since_id: threshold, result_type: "recent"};
+var params = {q: "happiest OR so+happy", count:20, result_type: "recent"};
+params.since_id = threshold
+console.log(threshold);
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     console.log(tweets);
@@ -44,6 +46,7 @@ client.get('search/tweets', params, function(error, tweets, response){
 });
 // Suprise
 var params = {q: "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"", count: 100, since_id: threshold, max_id: uppthresh};
+
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     supriseTweets = (tweets.statuses.length);
