@@ -1,5 +1,6 @@
 var Twitter = require("twitter");
 var fs = require("fs");
+var fsex = require("fs-extra");
 var client = new Twitter({
   consumer_key: 'PKMs5qGHrkfRqMIfqVa8NTD9q',                                  // This will be on the server, so it will not
   consumer_secret: 'lXPrTTSxSL0WZvskrdFHF9QoJEk2dHAmcLIOu1BEnBg4nmimYx',      //
@@ -14,7 +15,7 @@ client.post('statuses/update', params, function(error, tweets, response){
     console.log(tweets.id);
     tweetid = tweets.id;
     fs.writeFile("data/id.txt", tweetid.toString(), function(err) {
-      console.log(err);
+
       console.log("Tweet file saved");
     });
   }
