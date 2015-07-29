@@ -7,7 +7,10 @@ var client = new Twitter({
   access_token_key: '3359191738-ilVw7893ZDcdLwoNrWkYZx09JHjDyuyG21fOp1w',
   access_token_secret: 'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl'
 });
-var currTime = new Date()
+var currTime = new Date();
+var filtering = 10;
+var threshold;
+var uppthresh;
 // Dummy tweet to get current tweet ID
 var params = {status:"This is a dummy tweet to get the current tweet ID. Time:" + currTime};
 client.post('statuses/update', params, function(error, tweets, response){
@@ -16,14 +19,18 @@ client.post('statuses/update', params, function(error, tweets, response){
     tweetid = tweets.id;
     fs.writeFile("data/id.txt", tweetid.toString(), function(err) {
 
-      console.log("Tweet file saved");
+    console.log("Tweet file saved");
+    threshold = tweetid;
+    uppthresh = tweetid + 100;
     });
   }
 });
 
 
+
+
 // Happy
-var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count: 100};
+var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count: 100, since_id: threshold, max_id: uppthresh};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
 
@@ -34,7 +41,7 @@ client.get('search/tweets', params, function(error, tweets, response){
   }
 });
 // Suprise
-var params = {q: "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"", count: 100};
+var params = {q: "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"", count: 100, since_id: threshold, max_id: uppthresh};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     supriseTweets = (tweets.statuses.length);
@@ -44,7 +51,7 @@ client.get('search/tweets', params, function(error, tweets, response){
 });
 // Anger
 
-var params = {q: "\"i+hate\"+OR+\"really+angry\"+OR+\"i+am+mad\"+OR+\"really+hate\"+OR+\"so+angry\"", count: 100};
+var params = {q: "\"i+hate\"+OR+\"really+angry\"+OR+\"i+am+mad\"+OR+\"really+hate\"+OR+\"so+angry\"", count: 100, since_id: threshold, max_id: uppthresh};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     angerTweets = (tweets.statuses.length);
@@ -54,7 +61,7 @@ client.get('search/tweets', params, function(error, tweets, response){
 });
 // Sadness
 
-var params = {q: "\"i'm+so+sad\"+OR+\"i'm+heartbroken\"+OR+\"i'm+so+upset\"+OR+\"i'm+depressed\"+OR+\"i+can't+stop+crying\"", count: 100};
+var params = {q: "\"i'm+so+sad\"+OR+\"i'm+heartbroken\"+OR+\"i'm+so+upset\"+OR+\"i'm+depressed\"+OR+\"i+can't+stop+crying\"", count: 100, since_id: threshold, max_id: uppthresh};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     sadTweets = (tweets.statuses.length);
