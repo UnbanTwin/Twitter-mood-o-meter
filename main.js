@@ -15,6 +15,7 @@ var angerWords = "\"i+hate\"+OR+\"really+angry\"+OR+\"i+am+mad\"+OR+\"really+hat
 var envyWords = "\"i+wish+i\"+OR+\"i'm+envious\"+OR+ \"i'm+jealous\"+OR+\"i+want+to+be\"+OR+\"why+can't+i\"";
 var sadWords = "\"i'm+so+sad\"+OR+\"i'm+heartbroken\"+OR+\"i'm+so+upset\"+OR+\"i'm+depressed\"+OR+\"i+can't+stop+crying\"";
 var fearWords = "\"i'm+so+scared\"+OR+\"i'm+really+scared\"+OR+\"i'm+terrified\"+OR+\"i'm+really+afraid\"+OR+\"so+scared+i\"";
+var hasRun = 0;
 p("varsdef");
 // Authentication for Twitter API
 var OAuth = require('OAuth');
@@ -41,16 +42,19 @@ var getTweetCount = function(search, y) {
             console.log("123");
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
-            getTweets();
+            if (hasRun == 0) {
+                getTweets();
+            }
+            else{}
             setTimeout(collate, 15000)
             //collate();
             err = fs.writeFileSync("out.txt", count + "foo")
-              if(err) {
-              return console.log(err);
-              }
+            if(err) {
+                return console.log(err);
+            }
 
 
-              console.log("The file was saved!");
+            console.log("The file was saved!");
 
 
 
@@ -80,6 +84,7 @@ var getTweetCount = function(search, y) {
         getTweetCount(sadWords, 5);
         console.log("FEAR");
         var test = getTweetCount(fearWords, 6);
+        hasRun = 1;
 
     }
     p("getTweetsdef");
