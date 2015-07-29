@@ -5,17 +5,17 @@ var p = function(ccc) {
 fs = require("fs");
 p("requirecomplete");
 // Mood Word lists
-var nums = [7];
+var nums = [3];
 var count = "";
 var tweet;
-var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
+//var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
 var joyWords = "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"";
 var supriseWords = "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"";
 var angerWords = "\"i+hate\"+OR+\"really+angry\"+OR+\"i+am+mad\"+OR+\"really+hate\"+OR+\"so+angry\"";
-var envyWords = "\"i+wish+i\"+OR+\"i'm+envious\"+OR+ \"i'm+jealous\"+OR+\"i+want+to+be\"+OR+\"why+can't+i\"";
+//var envyWords = "\"i+wish+i\"+OR+\"i'm+envious\"+OR+ \"i'm+jealous\"+OR+\"i+want+to+be\"+OR+\"why+can't+i\"";
 var sadWords = "\"i'm+so+sad\"+OR+\"i'm+heartbroken\"+OR+\"i'm+so+upset\"+OR+\"i'm+depressed\"+OR+\"i+can't+stop+crying\"";
-var fearWords = "\"i'm+so+scared\"+OR+\"i'm+really+scared\"+OR+\"i'm+terrified\"+OR+\"i'm+really+afraid\"+OR+\"so+scared+i\"";
-var hasRun = 0;
+//var fearWords = "\"i'm+so+scared\"+OR+\"i'm+really+scared\"+OR+\"i'm+terrified\"+OR+\"i'm+really+afraid\"+OR+\"so+scared+i\"";
+var hasRun = false;
 p("varsdef");
 // Authentication for Twitter API
 var OAuth = require('OAuth');
@@ -42,23 +42,25 @@ var getTweetCount = function(search, y) {
             console.log("123");
             //console.log(data);
             console.log(Object.keys(tweet.statuses).length-1);
-            if (hasRun == 0) {
+            if (hasRun == false) {
                 getTweets();
-            }
-            else{}
-            setTimeout(collate, 15000)
-            //collate();
-            err = fs.writeFileSync("out.txt", count + "foo")
-            if(err) {
-                return console.log(err);
-            }
-
-
-            console.log("The file was saved!");
 
 
 
+                setTimeout(collate, 15000)
+                //collate();
+                p(count);
+                err = fs.writeFileSync("out.txt", count + "foo")
+                if(err) {
+                    return console.log(err);
+                }
 
+
+                console.log("The file was saved!");
+
+
+
+            };
         });
     }
     p("oauthgetdef");
@@ -66,7 +68,7 @@ var getTweetCount = function(search, y) {
 
     var getTweets = function() {
         console.log("LOVE");
-        getTweetCount(loveWords, 0);
+        //getTweetCount(loveWords, 0);
         console.log(tweet)
         nums[0] = Object.keys(tweet.statuses).length-1;
         console.log("JOY");
@@ -78,13 +80,13 @@ var getTweetCount = function(search, y) {
         console.log("ANGER");
         getTweetCount(angerWords, 3);
         nums[3] = Object.keys(tweet.statuses).length-1;
-        console.log("ENVY");
-        getTweetCount(envyWords, 4);
+        //console.log("ENVY");
+        //getTweetCount(envyWords, 4);
         console.log("SAD");
         getTweetCount(sadWords, 5);
-        console.log("FEAR");
-        var test = getTweetCount(fearWords, 6);
-        hasRun = 1;
+        //console.log("FEAR");
+        //var test = getTweetCount(fearWords, 6);
+        hasRun = true;
 
     }
     p("getTweetsdef");
@@ -93,7 +95,7 @@ var getTweetCount = function(search, y) {
     var collate = function() {
 
         p("getTweetsrun");
-        for(var i=0; i<=6; i++){
+        for(var i=0; i<=3; i++){
             p("in" + i);
             console.log("test");
             count = count + nums[i].toString();
