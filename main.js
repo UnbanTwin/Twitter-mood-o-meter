@@ -26,9 +26,11 @@ client.post('statuses/update', params, function(error, tweets, response){
 var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count: 100};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
+
     happyTweets = (tweets.statuses.length);
     console.log("HAPPY TWEETS");
     console.log(happyTweets);
+
   }
 });
 // Suprise
