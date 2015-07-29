@@ -5,7 +5,7 @@ var p = function(ccc) {
 fs = require("fs");
 p("requirecomplete");
 // Mood Word lists
-var nums = [3];
+var nums = [4];
 var count = "";
 var tweet;
 //var loveWords = "\"i+love+you\"+OR+\"i+love+her\"+OR+\"i+love+him\"+OR+\"all+my+love\"+OR+\"i'm+in+love\"+OR+\"i+really+love\"";
@@ -45,17 +45,17 @@ var getTweetCount = function(search, y) {
             if (hasRun == false) {
                 getTweets();
 
-            }
-            else{}
-            setTimeout(collate, 15000)
-            //collate();
-            err = fs.writeFileSync("out.txt", count + "foo")
 
 
-              if(err) {
-              return console.log(err);
-              }
+                setTimeout(collate, 15000)
+                //collate();
+                //err = fs.writeFileSync("out.txt", count + "foo")
 
+
+                /*if(err) {
+                    return console.log(err);
+                }
+*/
 
 
 
@@ -63,7 +63,8 @@ var getTweetCount = function(search, y) {
                 setTimeout(collate, 15000)
                 //collate();
                 p(count);
-                err = fs.writeFileSync("out.txt", count + "foo")
+                /*err = fs.writeFileSync("out.txt", "["+count+"]")
+                p("working")
                 if(err) {
                     return console.log(err);
                 }
@@ -71,9 +72,9 @@ var getTweetCount = function(search, y) {
 
                 console.log("The file was saved!");
 
-
-
+*/
             };
+
         });
     }
     p("oauthgetdef");
@@ -114,6 +115,7 @@ var getTweetCount = function(search, y) {
             count = count + nums[i].toString();
             p("done" + i);
             p(count);
+            err = fs.writeFileSync("out.txt", "["+count+"]")
         }
 
 
