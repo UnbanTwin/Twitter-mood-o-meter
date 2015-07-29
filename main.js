@@ -6,10 +6,23 @@ var client = new Twitter({
   access_token_secret: 'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl'
 });
 // Happy
-var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\""};
+var params = {q: "\"happiest\"+OR+\"so+happy\"+OR+\"so+excited\"+OR+\"i'm+happy\"+OR+\"woot\"+OR+\"w00t\"", count: 100};
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
 
-    console.log(tweets.statuses.length);
+    happyTweets = (tweets.statuses.length);
+    console.log("HAPPY TWEETS");
+    console.log(happyTweets);
+
   }
 });
+// Suprise
+var params = {q: "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"", count: 100};
+client.get('search/tweets', params, function(error, tweets, response){
+  if (!error) {
+    supriseTweets = (tweets.statuses.length);
+    console.log("SUPRISED TWEETS");
+    console.log(supriseTweets);
+  }
+});
+// Anger
