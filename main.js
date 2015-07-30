@@ -40,6 +40,7 @@ client.post('statuses/update', params, function(error, tweets, response){
         console.log(happyTweets);
         happy = happyTweets
         // write to file here later
+        fs.writeFile("data/happy.txt", happy, function(err){});
       }
     });
     var params = {q: "wow OR O_o OR can't+believe OR wtf OR unbelievable", count:100, result_type: "recent"};
@@ -52,7 +53,7 @@ client.post('statuses/update', params, function(error, tweets, response){
         console.log("SUPRISED TWEETS");
         console.log(suprisedTweets);
         suprised = suprisedTweets;
-
+        fs.writeFile("data/suprised.txt", suprised, function(err){});
       }
     });
     var params = {q: " i+hate OR really+angry OR i+am+mad OR really+hate OR so+angry ", count:100, result_type: "recent"};
@@ -65,7 +66,7 @@ client.post('statuses/update', params, function(error, tweets, response){
         console.log("ANGRY TWEETS");
         console.log(angerTweets);
         anger = angerTweets;
-
+        fs.writeFile("data/anger.txt", anger, function(err){});
       }
     });
     var params = {q: "i'm+so+sad OR i'm+heartbroken OR i'm+so+upset OR i'm+depressed OR i+can't+stop+crying", count:100, result_type: "recent"};
@@ -78,7 +79,7 @@ client.post('statuses/update', params, function(error, tweets, response){
         console.log("SAD TWEETS");
         console.log(sadTweets);
         sadness = sadTweets;
-
+        fs.writeFile("data/sad.txt", sadness, function(err){});
       }
     });
     // end of the tower of callbacks
