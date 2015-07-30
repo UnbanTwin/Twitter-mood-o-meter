@@ -1,12 +1,5 @@
 <!Doctype html>
 
-<style>
-
-#output {
-    text-align: center;
-}
-
-</style>
 
 <html>
 
@@ -29,11 +22,12 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--<script src="oauth.js"></script>-->
-<script src="client2.js"></script>
+
 <script src="dist/js/material.min.js"></script>
 <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
 <link rel="stylesheet" type="text/css" href="dist/css/material.min.css">
-
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="client2.js"></script>
 
 
 </head>
@@ -53,16 +47,14 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">How it works</a></li>
+                <li><a href="http://festival.yrs.io/">Festival of Code</a></li>
 
 
 
             </ul>
-            <ul class="navbar navbar-right">
-              <li><a href="http://festival.yrs.io/">Festival of Code</a></li>
-            </ul>
+
         </li>
     </ul>
-
 
 </li>
 </ul>
@@ -70,9 +62,19 @@
 </div>
 
 
-<div id="#output"></div>
+<div id="output">The world is feeling <b id="em">LOADING...</b> today</div>
 
 
 
 </body>
+
+<script>
+
+$( ".navbar" ).hover(function() {
+    $(this).hide();
+
+});
+
+</script>
+
 </html>

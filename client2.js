@@ -21,6 +21,7 @@ var carryOn = function () {
 }
 //["#FFB300", "#1DE9B6", "#B71C1C", "#00B8D4"];
 
+
 // read data from the data directories
 var oReq = new XMLHttpRequest();
 oReq.open("get", datadir + "happy.txt", true);
@@ -51,4 +52,10 @@ oReq.onload = function () {
 
         }
     }
-}
+};
+
+
+$( ".navbar" ).hover(function() {
+    $(this).show();
+
+});
