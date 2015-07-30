@@ -4,7 +4,7 @@ var suprise;
 var anger;
 var sadness;
 // asthetic settings
-var emotionsstr = ["joy", "suprised", "anger", "sadness"]
+var emotionsstr = ["joy", "surpised", "anger", "sadness"]
 var colors = ["#FFB300", "#1DE9B6", "#B71C1C", "#00B8D4"];
 // directories
 var datadir = "data/"
