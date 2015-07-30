@@ -21,7 +21,9 @@ client.post('statuses/update', params, function(error, tweets, response){
     fs.writeFile("data/id.txt", tweetid.toString(), function(err) {
     console.log(tweetid);
     console.log("Tweet file saved");
-    threshold = tweetid - 100000 ;
+
+    threshold = tweetid - 100000000000 ;
+
     //uppthresh = tweetid + 100
     var params = {q: "happiest OR so+happy OR so+excited OR im+happy OR woot OR w00t", count:100, result_type: "recent"};
     params.since_id = threshold

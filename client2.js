@@ -53,9 +53,3 @@ oReq.onload = function () {
         }
     }
 };
-
-
-$( ".navbar" ).hover(function() {
-    $(this).show();
-
-});
