@@ -1,0 +1,21 @@
+.navbar {
+    opacity: 0 !important;
+}
+#output {
+  vertical-align: middle !important;
+  horizontal-align: middle !important;
+}
+.outer {
+    position: relative;
+    height: 300px;
+    background-color: yellow;
+}
+
+.inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: green;
+    width: 50%;
+}

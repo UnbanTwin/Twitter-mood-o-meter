@@ -21,8 +21,21 @@ client.post('statuses/update', params, function(error, tweets, response){
     fs.writeFile("data/id.txt", tweetid.toString(), function(err) {
     console.log(tweetid);
     console.log("Tweet file saved");
-    threshold = tweetid;
-    //uppthresh = tweetid + 100;
+    threshold = tweetid - 100000000000 ;
+    //uppthresh = tweetid + 100
+    var params = {q: "happiest OR so+happy OR so+excited OR im+happy OR woot OR w00t", count:100, result_type: "recent"};
+    params.since_id = threshold
+    console.log(threshold);
+    client.get('search/tweets', params, function(error, tweets, response){
+      if (!error) {
+        console.log(tweets);
+        happyTweets = (tweets.statuses.length);
+        console.log("HAPPY TWEETS");
+        console.log(happyTweets);
+        totalTweets = happyTweets
+
+      }
+    });
     });
   }
 });
@@ -31,22 +44,9 @@ client.post('statuses/update', params, function(error, tweets, response){
 
 
 // Happy
-var params = {q: "happiest OR so+happy", count:20, result_type: "recent"};
-params.since_id = threshold
-console.log(threshold);
-client.get('search/tweets', params, function(error, tweets, response){
-  if (!error) {
-    console.log(tweets);
-    happyTweets = (tweets.statuses.length);
-    console.log("HAPPY TWEETS");
-    console.log(happyTweets);
-    totalTweets = happyTweets
 
-  }
-});
 // Suprise
 var params = {q: "\"wow\"+OR+\"O_o\"+OR+\"can't+believe\"+OR+\"wtf\"+OR+\"unbelievable\"", count: 100, since_id: threshold, max_id: uppthresh};
-
 client.get('search/tweets', params, function(error, tweets, response){
   if (!error) {
     supriseTweets = (tweets.statuses.length);
