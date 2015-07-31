@@ -4,7 +4,7 @@ var fs = require("fs");
 var fsex = require("fs-extra");
 var client = new Twitter({
   consumer_key: 'PKMs5qGHrkfRqMIfqVa8NTD9q',                                  // This will be on the server, so it will not
-  consumer_secret: 'lXPrTTSxSL0WZvskrdFHF9QoJEk2dHAmcLIOu1BEnBg4nmimYx',      //
+  consumer_secret: 'lXPrTTSxSL0WZvskrdFHF9QoJEk2dHAmcLIOu1BEnBg4nmimYx',      // be visibile
   access_token_key: '3359191738-ilVw7893ZDcdLwoNrWkYZx09JHjDyuyG21fOp1w',
   access_token_secret: 'DKNzSY0Ni3zwjq1dIPODpiVKZWdDrjQDjHPyiGsjRU9Gl'
 });
@@ -13,7 +13,7 @@ var filtering = 10;
 var threshold;
 var uppthresh;
 var totalTweets;
-var threshWindow = 100000000000
+var threshWindow = 100000000000;
 var happy;
 var suprise;
 var anger;
@@ -46,7 +46,7 @@ client.post('statuses/update', params, function(error, tweets, response){
         fs.writeFile("data/happy.txt", happy, function(err){});
       }
     });
-    var params = {q: "wow OR O_o OR can't+believe OR wtf OR unbelievable", count:100, result_type: "recent"};
+    var params = {q: "O_o OR can't+believe OR wtf OR unbelievable", count:100, result_type: "recent"};
     params.since_id = threshold
     console.log(threshold);
     client.get('search/tweets', params, function(error, tweets, response){
