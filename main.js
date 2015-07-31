@@ -1,3 +1,4 @@
+// Test my git commit abilitioes
 var Twitter = require("twitter");
 var fs = require("fs");
 var fsex = require("fs-extra");
@@ -34,7 +35,7 @@ client.post('statuses/update', params, function(error, tweets, response){
     var params = {q: "happiest OR so+happy OR so+excited OR im+happy OR woot OR w00t", count:100, result_type: "recent"};
     params.since_id = threshold
     console.log(threshold);
-    client.get('search/tweets', params, function(error, tweets, response){
+    client.get('search/tweets', params, function(error, tweets, response) {
       if (!error) {
         //console.log(tweets);
         happyTweets = (tweets.statuses.length);
